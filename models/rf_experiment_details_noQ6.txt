@@ -1,0 +1,6 @@
+Model: RandomForestRegressor(), 
+Number Labels: 3, 
+Accuracy= 0.8208955223880597, 
+ precision_macro=0.8404416839199449, 
+ recall_macro=0.8185463659147869, 
+ f1_macro=0.8215677221290694
