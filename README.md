@@ -11,7 +11,7 @@ Repository Contents
 - docs/: Contains articles on the topic
 - images/: Generated images
 
-'''
+````{verbatim}
 @article{mallinger2024breaking,
   title={Breaking the Barriers of Technology Adoption: Explainable AI for Requirement Analysis and Technology Design in Smart Farming},
   author={Mallinger, Kevin and Corpaci, Luiza and Neubauer, Thomas and Tik{\'a}sz, Ildik{\'o} E and Goldenits, Georg and Banhazi, Thomas},
@@ -21,4 +21,4 @@ Repository Contents
   publisher={Elsevier}
 }
 
-'''
+````
