@@ -20,8 +20,7 @@ original_df = pd.read_csv(filename)
 df = original_df.copy()
 
 
-#%%
-# load X_train, X_test, y_train, y_test from file
+#%% Load data
 X_train = pd.read_csv(DATA_PATH + 'X_train.csv')
 X_test = pd.read_csv(DATA_PATH + 'X_test.csv')
 y_train = pd.read_csv(DATA_PATH + 'y_train.csv').values.ravel()
@@ -43,8 +42,7 @@ clf = joblib.load(f'../models/rf_model_of_choice{extra_str}.pkl')
 
 clf, y_pred, precision, recall, f1, accuracy = rf(X_train, y_train, X_test, y_test, X, y, clf)
 
-#%%
-# Explainability
+#%% Explainability
 features = list(range(X_train.shape[1])) 
 
 label_names = {0: "Not Ready",
@@ -54,8 +52,6 @@ label_names = {0: "Not Ready",
 
 # %%
 # SHAP 
-###########################
-
 shap_explanations = {0: [], 1: [], 2: []}
 explainer = shap.Explainer(clf, X_train, seed=42)
 
@@ -67,13 +63,9 @@ for instance_index in range(len(X_test)):
 feature_names = X_train.columns
 aggregated_shap_explanations = aggregate_shap_values(shap_explanations, feature_names)
 plot_class_explanations(aggregated_shap_explanations, 'SHAP', label_names, extra_str)
-# plot_aggregated_class_explanations(aggregated_shap_explanations, 'SHAP', label_names, extra_str)
-# plot_aggregated_class_explanations_horiz(aggregated_shap_explanations, 'SHAP', label_names, extra_str)
 plot_aggregated_class_explanations_horiz_ordered_by_sum_of_absolutes(aggregated_shap_explanations, 'SHAP', label_names, extra_str)
 
-#%%
-# LIME with linear surrogate 
-##########################
+#%% LIME with linear surrogate 
 lime_explanations = {0:[],
                      1:[],
                      2:[]}
@@ -99,14 +91,8 @@ for instance_index in range(len(X_test)):
 
 aggregated_explanations = aggregate_lime_explanations(lime_explanations)
 plot_class_explanations(aggregated_explanations, 'LIME', label_names, extra_str)
-# plot_aggregated_class_explanations(aggregated_explanations, 'LIME', label_names, extra_str)
 
-
-
-
-# %%
-# Partial Dependence Plots  
-###########################
+# %% Partial Dependence Plots  
 desired_value = 2
 n_rows = 7
 n_cols = 3

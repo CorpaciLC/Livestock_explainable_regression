@@ -1,9 +1,4 @@
-#%%
-!pip install gapstatistics
-
-
-#%%
-
+#%% Imports
 import os
 
 import pandas as pd
@@ -28,7 +23,7 @@ original_df = pd.read_csv(filename)
 df = original_df.copy()
 
 
-#%%
+#%% Load the data
 X_train = pd.read_csv(DATA_PATH + 'X_train.csv')
 X_test = pd.read_csv(DATA_PATH + 'X_test.csv')
 y_train = pd.read_csv(DATA_PATH + 'y_train.csv').values.ravel()
@@ -54,7 +49,7 @@ X_train.drop(columns=['Q6. TECH usage'], inplace=True)
 X_test.drop(columns=['Q6. TECH usage'], inplace=True)
 
 
-#%%
+#%% Cluster Validation metrics
 
 part_separation_values = []
 rCIP_values = []
@@ -101,7 +96,5 @@ plt.yticks(fontsize=18)
 plt.xticks(range(2, max_clusters), fontsize=18)
 plt.grid(True)
 plt.savefig('../images/wb_index.eps', format='eps', dpi=300)
-
-
 
 #%%
