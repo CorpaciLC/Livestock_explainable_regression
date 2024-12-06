@@ -11,6 +11,10 @@ Repository Contents
 - docs/: Contains articles on the topic
 - images/: Generated images
 
+
+
+
+Citation:
 ````{verbatim}
 @article{mallinger2024breaking,
   title={Breaking the Barriers of Technology Adoption: Explainable AI for Requirement Analysis and Technology Design in Smart Farming},
@@ -20,5 +24,4 @@ Repository Contents
   year={2024},
   publisher={Elsevier}
 }
-
 ````
