@@ -6,7 +6,7 @@ Repository Contents
 - data/: Contains the survey data used for training and testing the models.
   - X, y (_train, _test) <- files with saved split (for consistency between lime/shap/pdp)
 - src/: Contains source files and relevant notebooks.
-- models/: Saved Random Forest Model with 80% accuracy.
+- models/: Saved Random Forest Model.
 - docs/: Contains articles on the topic
 
 
