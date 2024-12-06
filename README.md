@@ -8,5 +8,17 @@ Repository Contents
   - labelled_kmeans_data_pig_poultry_last_verified_by_thomas_and_ildiko <- file with labels from previous paper. Agreed with Thomas B. and Ildiko
 - src/: Contains source files and relevant notebooks.
 - models/: Saved Random Forest Model with 80% accuracy.
+- docs/: Contains articles on the topic
+- images/: Generated images
 
-[Overleaf project](https://www.overleaf.com/7456244887rbgfrmgcvbbb#41556c)
+'''
+@article{mallinger2024breaking,
+  title={Breaking the Barriers of Technology Adoption: Explainable AI for Requirement Analysis and Technology Design in Smart Farming},
+  author={Mallinger, Kevin and Corpaci, Luiza and Neubauer, Thomas and Tik{\'a}sz, Ildik{\'o} E and Goldenits, Georg and Banhazi, Thomas},
+  journal={Smart Agricultural Technology},
+  pages={100658},
+  year={2024},
+  publisher={Elsevier}
+}
+
+'''
