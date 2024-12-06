@@ -9,7 +9,6 @@ Repository Contents
 - src/: Contains source files and relevant notebooks.
 - models/: Saved Random Forest Model with 80% accuracy.
 - docs/: Contains articles on the topic
-- images/: Generated images
 
 
 
