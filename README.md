@@ -7,7 +7,6 @@ Repository Contents
   - X, y (_train, _test) <- files with saved split (for consistency between lime/shap/pdp)
 - src/: Contains source files and relevant notebooks.
 - models/: Saved Random Forest Model.
-- docs/: Contains articles on the topic
 
 
 
